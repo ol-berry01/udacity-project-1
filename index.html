@@ -9,17 +9,55 @@
     <title>Project: Personal Blog Website</title>
   </head>
   <body>
+    <nav class="navbar">
+      <div class="navbar-navigation">
+        <ul class="nav-list">
+          <li class="nav-list-item"><a href="#">Home</a></li>
+          <li class="nav-list-item"><a href="#">About</a></li>
+          <li class="nav-list-item"><a href="#">News</a></li>
+          <li class="nav-list-item"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="container">
       <header class="header">
-        <p>Header</p>
+        <div class="brand">
+          <a href="#"><h1 class="logo">UK Steam</h1></a>
+        </div>
+        <nav class="hamburger">
+          <div class="hamburger-menu">
+            <input type="checkbox" id="check" class="checkbox" hidden />
+            <label for="check" class="menu">
+              <div class="menu-line menu-line-1"></div>
+              <div class="menu-line menu-line-2"></div>
+              <div class="menu-line menu-line-3"></div>
+            </label>
+          </div>
+        </nav>
+        <nav class="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="admin">
+          <ul>
+            <li><a href="#">Signup</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Search</a></li>
+          </ul>
+        </div>
       </header>
+      <article class="content">
+        <p>Content</p>
+      </article>
       <aside class="side-bar">
         <p>Sidebar</p>
         <a href="blog-post.html">Blog Post</a>
       </aside>
-      <article class="content">
-        <p>Content</p>
-      </article>
       <footer class="footer">
         <p>Footer</p>
         <a href="design-system.html">Design System</a>

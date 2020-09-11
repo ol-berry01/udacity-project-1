@@ -46,6 +46,14 @@ i {
   margin: 1rem 0;
   font-size: 1.6rem;
 }
+a {
+  color: #8db600;
+  text-decoration: none;
+  transition: 300ms;
+}
+a:hover {
+  opacity: 0.75;
+}
 p.lead {
   color: #777;
   font-size: 2rem;
@@ -97,6 +105,7 @@ p.lead {
   background-color: #fdfdfd;
   padding: 2.5rem 3rem;
   width: 100%;
+  box-shadow: 0 5px 10px -10px #444;
   position: relative;
   grid-area: header;
   display: grid;
@@ -118,7 +127,11 @@ p.lead {
   width: 2.5rem;
   height: 2.5rem;
   position: fixed;
+  transition: 300ms;
   z-index: 300;
+}
+.header .hamburger .hamburger-menu:hover {
+  opacity: 0.75;
 }
 .header .hamburger .hamburger-menu .menu {
   width: 100%;
@@ -196,6 +209,14 @@ p.lead {
   border-radius: 0.5rem;
   transition: 300ms;
 }
+.content .button .content-btn:hover {
+  background: #8db600;
+  color: #fdfdfd;
+  opacity: 1;
+}
+.content .button .content-btn i {
+  margin: 0;
+}
 
 .side-bar {
   background: #fdfdfd;
@@ -219,7 +240,6 @@ p.lead {
   border-radius: 1rem;
   box-shadow: -10px 10px 20px rgba(81, 132, 191, 0.2);
   overflow: hidden;
-  transition: 300ms;
   display: grid;
   grid-template-areas:
     "content"
@@ -276,4 +296,21 @@ p.lead {
 .side-bar .blog-item-3 {
   background: #444;
   background: linear-gradient(180deg, rgba(68, 68, 68, 0) 60%, rgba(68, 68, 68, 1) 100%), url(../images/46233-duchess-thumb.jpg) no-repeat top right/cover;
+}
+
+.footer {
+  background: #777;
+  color: #fdfdfd;
+  padding: 2.5rem;
+  text-align: center;
+}
+.footer .footer-left {
+  display: none;
+}
+.footer .footer-right {
+}
+.footer .footer-right .copyright {
+  border-right: 2px solid #fdfdfd;
+  margin-right: 0.5rem;
+  padding-right: 0.5rem;
 }

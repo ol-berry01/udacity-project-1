@@ -1,0 +1,235 @@
+body {
+  background: url("../images/4468-Mallard-small.jpg") no-repeat top center/cover;
+  background-size: 100%;
+  background-position-y: 54px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+.content {
+  background: #fdfdfd;
+  margin-top: 40rem;
+  padding: 2.5rem;
+  grid-area: content;
+  display: grid;
+  grid-template-areas:
+    "article"
+    "button";
+  grid-template-rows: minmax(150px, auto) auto;
+}
+.content:after {
+  content: "";
+  border-bottom: 1px solid #777;
+  opacity: 0.2;
+}
+.content .article-gallery {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-gap: 1rem;
+}
+.content .article-gallery-img {
+  height: 60vw;
+  border: 2px solid #8db600;
+  border-radius: 0.3rem;
+}
+.content .article-gallery-img.gallery-img-1 {
+  background: url("../images/4468-Mallard.jpg") no-repeat center center/cover;
+}
+.content .article-gallery-img.gallery-img-2 {
+  background: url("../images/4468-Mallard-Record_Plate.jpg") no-repeat center center/cover;
+}
+.content .article-gallery-img.gallery-img-3 {
+  background: url("../images/60022-Mallard-Stoke_Bank.jpg") no-repeat center center/cover;
+}
+
+.side-bar {
+  background: #fdfdfd;
+  padding: 2.5rem;
+  grid-area: sidebar;
+  display: grid;
+  grid-template-rows: 35px repeat(2, 1fr);
+  grid-gap: 1rem;
+  grid-template-areas:
+    "side-bar-title"
+    "side-bar-content"
+    "side-bar-content";
+}
+.side-bar .side-bar-title {
+  background: #8db600;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  grid-area: side-bar-title;
+}
+.side-bar .side-bar-card {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.side-bar .side-bar-card a {
+  width: 100%;
+}
+.side-bar .side-bar-card h4 {
+  color: #fdfdfd;
+}
+.side-bar .side-bar-title h4 {
+  color: #fdfdfd;
+  margin-bottom: 0;
+}
+.side-bar .side-bar-card {
+  height: 60vw;
+}
+.side-bar .side-bar-card-1 {
+  background: url("../images/60103-scotsman-thumb.jpg") no-repeat center center/cover;
+}
+.side-bar .side-bar-card-2 {
+  background: url("../images/46233-duchess-thumb.jpg") no-repeat center center/cover;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("../images/4468-Mallard-tall.jpg");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-position-x: -350px;
+    background-color: #fdfdfd;
+    color: #444;
+    width: 50vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    grid-template-rows: 54px auto 25% 10%;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+  }
+
+  .header {
+    position: fixed;
+  }
+
+  .content {
+    width: 70%;
+    margin-top: 0;
+    margin-left: auto;
+    padding: 2.5rem;
+    grid-template-rows: 65% 35%;
+  }
+  .content .article-gallery {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 1rem;
+  }
+  .content .article-gallery-img {
+    height: auto;
+    border: 2px solid #8db600;
+    border-radius: 0.3rem;
+  }
+
+  .side-bar {
+    width: 70%;
+    margin-left: auto;
+    padding: 2.5rem;
+    grid-template-rows: 35px auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "side-bar-title side-bar-title"
+      "side-bar-content side-bar-content";
+  }
+  .side-bar .side-bar-card {
+    height: auto;
+  }
+}
+
+@media (min-width: 1100px) {
+  body {
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 50%;
+    background-color: #fdfdfd;
+    color: #444;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    grid-template-rows: 5% auto 17.5% 12.5%;
+    grid-template-areas:
+      "header header"
+      "content content"
+      "sidebar sidebar"
+      "footer footer";
+  }
+  .header {
+    background: #fdfdfd;
+  }
+  .header h2 {
+    color: #8db600;
+  }
+  .header .menu ul li a {
+    color: #444 !important;
+  }
+  .header .admin ul li a {
+    color: #444;
+    text-decoration: none;
+    transition: 300ms;
+  }
+
+  .content {
+    width: 50%;
+    margin-top: 0;
+    margin-left: auto;
+    padding: 2.5rem;
+    display: grid;
+    grid-template-rows: auto 30%;
+    grid-gap: 2.5rem;
+    align-content: center;
+  }
+  .content:after {
+    content: "";
+    border-bottom: 1px solid #777;
+    opacity: 0.2;
+  }
+  .content .article {
+    align-self: center;
+  }
+  .content .article-gallery {
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 2.5rem;
+  }
+  .content .article-gallery-img {
+    height: 100%;
+  }
+
+  .side-bar {
+    width: 50%;
+    padding: 2.5rem;
+    margin-left: auto;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100px repeat(2, 1fr);
+    grid-template-areas: "side-bar-title side-bar-content side-bar-content";
+    grid-gap: 2.5rem;
+  }
+  .side-bar .side-bar-card {
+    height: 100%;
+    padding: 2.5rem;
+  }
+}

@@ -3,20 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/design.css" />
 
     <title>Project: Personal Blog Website</title>
   </head>
   <body>
+    <nav class="navbar">
+      <div class="navbar-navigation">
+        <ul class="nav-list">
+          <li class="nav-list-item"><a href="/index.html">Home</a></li>
+          <li class="nav-list-item"><a href="#">About</a></li>
+          <li class="nav-list-item"><a href="#">News</a></li>
+          <li class="nav-list-item"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="container">
-      <header class="header">Header</header>
-      <aside class="side-bar">
-        <p>Sidebar</p>
-        <a href="index.html">Home</a>
-        <a href="blog-post.html">Blog Post</a>
-      </aside>
-      <article class="content">Content</article>
-      <footer class="footer">Footer</footer>
+      <header class="header">
+        <div class="brand">
+          <a href="/index.html"><h2 class="logo">UK Steam</h2></a>
+        </div>
+        <nav class="hamburger">
+          <div class="hamburger-menu">
+            <input type="checkbox" id="check" class="checkbox" hidden />
+            <label for="check" class="menu">
+              <div class="menu-line menu-line-1"></div>
+              <div class="menu-line menu-line-2"></div>
+              <div class="menu-line menu-line-3"></div>
+            </label>
+          </div>
+        </nav>
+        <nav class="menu">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="admin">
+          <ul>
+            <li><a href="#">Signup</a></li>
+            <li><a href="#">Login</a></li>
+            <li>
+              <a href="#"><i class="fas fa-search"></i></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <article class="content">
+        <div class="design">
+          <p class="lead title">Type</p>
+          <h1>Title 1 <small>32px / 28px</small></h1>
+          <h2>Title 2 <small>24px</small></h2>
+          <h3>Title 3 <small>20px / 16px</small></h3>
+          <h4>Title 4 <small>18px</small></h4>
+          <h5>Title 5 <small>17px</small></h5>
+          <h6>Title 6 <small>16px</small></h6>
+          <p>Paragraph <small>16px</small></p>
+          <p class="lead">Paragraph.lead <small>20px</small></p>
+          <a href="#">Anchor <small>16px</small></a>
+        </div>
+        <div class="design">
+          <p class="lead title">Colours</p>
+
+          <div class="design-colours">
+            <div class="colour colour-1">
+              <p>Primary Colour</p>
+            </div>
+            <div class="colour-example example-1"></div>
+            <div class="colour colour-2">
+              <p>Secondary Colour</p>
+            </div>
+            <div class="colour-example example-2"></div>
+            <div class="colour colour-3">
+              <p>Dark Grey</p>
+              <br />
+            </div>
+            <div class="colour-example example-3"></div>
+            <div class="colour colour-4">
+              <p>Light Grey</p>
+            </div>
+            <div class="colour-example example-4"></div>
+          </div>
+        </div>
+      </article>
+
+      <footer class="footer">
+        <div class="footer-left" hidden>
+          <a>
+            <button class="arrow left-arrow" disabled>
+              <i class="fas fa-chevron-left"></i>
+            </button>
+          </a>
+          <a href="#">
+            <button class="arrow right-arrow">
+              <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+        <div class="footer-right">
+            <span class="copyright">&copy;Copyright UK Steam 2020 </span>
+            <a href="design-system.html">Design System</a>
+          </p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

@@ -3,26 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/blog.css" />
 
-    <title>Blog Post | Project: Personal Blog Website</title>
+    <title>LNER 4468 'Mallard' | UK Steam Blog Post</title>
   </head>
   <body>
     <div class="container">
       <header class="header">
-        <p>Header</p>
+        <div class="brand">
+          <a href="/index.html"><h2 class="logo">UK Steam</h2></a>
+        </div>
+        <nav class="hamburger">
+          <div class="hamburger-menu">
+            <input type="checkbox" id="check" class="checkbox" hidden />
+            <label for="check" class="menu">
+              <div class="menu-line menu-line-1"></div>
+              <div class="menu-line menu-line-2"></div>
+              <div class="menu-line menu-line-3"></div>
+            </label>
+          </div>
+        </nav>
+        <nav class="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="admin">
+          <ul>
+            <li><a href="#">Signup</a></li>
+            <li><a href="#">Login</a></li>
+            <li>
+              <a href="#"><i class="fas fa-search"></i></a>
+            </li>
+          </ul>
+        </div>
       </header>
-      <aside class="side-bar">
-        <p>Sidebar</p>
-        <a href="index.html">Home</a>
-      </aside>
       <article class="content">
-        <p>Content</p>
+        <div class="article">
+          <p><small>By <a href="#">Oliver Berry</a> posted on 08/08/2020</small></p>
+          <h1>The World's Fastest</h1>
+          <p class="lead">LNER 4468 'Mallard' - Gresley A4 Pacific Locomotive</p>
+          <p>London and North Eastern Railway locomotive number 4468, Mallard is a Class A4 Pacific steam locomotive.</p>
+          
+          <p>The wind-tunnel-tested,aerodynamic body and high power allowed the class to reach speeds of over 100 miles per hour (160 km/h). Mallard covered almost one and a half million miles before it was retired in 1963.</p>
+
+          <p>It is historically significant as the holder of the world speed record for steam locomotives at 126 mph (203 km/h) and as such is now part of the National Collection at the UK's National Railway Museum in York.</p>
+        
+        </div>
+        <div class="article-gallery">
+          <div class="article-gallery-img gallery-img-1"></div>
+          <div class="article-gallery-img gallery-img-2"></div>
+          <div class="article-gallery-img gallery-img-3"></div>
+        </div>
       </article>
+      </article>
+      <aside class="side-bar">
+        <div class="side-bar-title">
+
+          <h4>Other Articles</h4>
+        </div>
+          <div class="side-bar-card side-bar-card-1">
+
+            <a href="index.html"><h4>Tour: The Cotswold Venturer</h4></a>
+          </div>
+          <div class="side-bar-card side-bar-card-2">
+
+            <a href="index.html"><h4>Tour: The Dorset Coast Express</h4></a>
+          </div>
+      </aside>
       <footer class="footer">
-        <p>Footer</p>
-        <a href="design-system.html">Design System</a>
+        <div class="footer-left">
+          <a href="/index.html">
+            <button class="arrow left-arrow">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+          </a>
+          <a href="#">
+            <button class="arrow right-arrow">
+              <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+        <div class="footer-right">
+          <p>Background photo by <a href="https://www.reddit.com/user/cameronchalmers/" target="_blank">u/cameronchalmers</a> on <a href="https://www.reddit.com/r/trains/comments/f3brdu/lner_class_a4_4468_mallard_sitting_proudly_at_the/" target="_blank">Reddit</a></p>
+          <p>
+            <span class="copyright">&copy;Copyright UK Steam 2020 </span>
+            <a href="design-system.html">Design System</a>
+          </p>
+        </div>
       </footer>
     </div>
   </body>

@@ -1,0 +1,199 @@
+.content {
+  background: #fdfdfd;
+  margin-top: 40rem;
+  padding: 2.5rem;
+  grid-area: content;
+  display: grid;
+  grid-template-areas:
+    "article"
+    "button";
+  grid-template-rows: minmax(150px, auto) auto;
+}
+.content .article {
+  grid-area: article;
+}
+.content .article h1 {
+  font-size: 2.8rem;
+}
+.content .button {
+  width: 100%;
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+}
+.content .button a {
+  margin: 0;
+}
+.content .button .content-btn {
+  background: none;
+  color: #8db600;
+  margin: 0;
+  padding: 1.5rem 3rem;
+  border: 2px solid #8db600;
+  border-radius: 0.5rem;
+  transition: 300ms;
+}
+.content .button .content-btn:hover {
+  background: #8db600;
+  color: #fdfdfd;
+  opacity: 1;
+}
+.content .button .content-btn i {
+  margin: 0;
+}
+
+.side-bar {
+  background: #fdfdfd;
+  padding: 2.5rem;
+  grid-area: sidebar;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "blog-items";
+  grid-template-rows: 29px calc(100% - 29px);
+  grid-gap: 1rem;
+}
+.side-bar .latest-item {
+  color: #fdfdfd;
+  grid-area: title;
+}
+.side-bar .latest-item h2 {
+  margin-bottom: 1rem;
+}
+.side-bar .blog-items {
+  display: grid;
+  grid-template-rows: calc(100vw - 5rem) calc(100vw - 5rem);
+  grid-gap: 2.5rem;
+  grid-area: blog-items;
+}
+.side-bar .blog-items .blog-item {
+  height: calc(100vw - 5rem);
+  border: 2px solid #8db600;
+  border-radius: 1rem;
+  box-shadow: -10px 10px 20px rgba(81, 132, 191, 0.2);
+  overflow: hidden;
+  display: grid;
+  grid-template-areas:
+    "content"
+    "button";
+  grid-gap: 0;
+  grid-template-rows: auto 45px;
+}
+.side-bar .blog-items .blog-item:nth-child(3) {
+  display: none;
+}
+.side-bar .blog-items .blog-item:hover {
+  box-shadow: -5px 5px 10px rgba(141, 182, 0, 0.3);
+  transition-delay: 0ms;
+}
+.side-bar .blog-items .blog-item .blog-item-txt {
+  padding: 1rem;
+  display: flex;
+}
+.side-bar .blog-items .blog-item-txt h3 {
+  color: #fdfdfd;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  align-self: flex-end;
+}
+.side-bar .blog-items .blog-item .blog-item-btn {
+  margin: 0;
+}
+.side-bar .blog-items .blog-item .blog-item-btn button {
+  background: #8db600;
+  color: #fdfdfd;
+  width: 100%;
+  height: 45px;
+  border: none;
+  margin: 0;
+  padding: 0.1rem 1rem;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+  transition: 700ms;
+  grid-area: button;
+}
+.side-bar .blog-items .blog-item .blog-item-btn button:hover {
+  background: #444;
+}
+.side-bar .blog-item-1 {
+  background: #444;
+  background: linear-gradient(180deg, rgba(68, 68, 68, 0) 60%, rgba(68, 68, 68, 1) 100%), url(../images/4468-Mallard-thumb.jpg) no-repeat top right/cover;
+  width: 100%;
+}
+.side-bar .blog-item-2 {
+  background: #444;
+  background: linear-gradient(180deg, rgba(68, 68, 68, 0) 60%, rgba(68, 68, 68, 1) 100%), url(../images/60103-scotsman-thumb.jpg) no-repeat top left/cover;
+}
+.side-bar .blog-item-3 {
+  background: #444;
+  background: linear-gradient(180deg, rgba(68, 68, 68, 0) 60%, rgba(68, 68, 68, 1) 100%), url(../images/46233-duchess-thumb.jpg) no-repeat top right/cover;
+}
+
+@media (min-width: 768px) {
+  .content,
+  .side-bar {
+    margin-top: 0;
+  }
+
+  .content {
+    grid-template-rows: auto 53px;
+    grid-gap: 5rem;
+    align-content: center;
+  }
+
+  .side-bar {
+    background-color: transparent;
+    grid-template-rows: 29px calc(85% - 29px);
+    align-content: center;
+  }
+  .side-bar .latest-item {
+    color: #fdfdfd;
+    text-align: center;
+  }
+  .side-bar .latest-item h2 {
+    color: #fdfdfd;
+  }
+  .side-bar .blog-items {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 40% 40%;
+    grid-gap: 2.5rem;
+    justify-content: center;
+    align-content: center;
+  }
+  .side-bar .blog-items .blog-item {
+    height: auto;
+  }
+}
+
+@media (min-width: 1100px) {
+  .content {
+    width: 50%;
+    margin-left: auto;
+  }
+  .content .button {
+    justify-content: start;
+  }
+
+  .side-bar {
+    width: 70%;
+    margin-left: auto;
+    grid-template-rows: 100%;
+    grid-template-areas: "blog-items blog-items blog-items";
+    align-content: flex-start;
+  }
+  .side-bar .latest-item {
+    display: none;
+  }
+  .side-bar .blog-items {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 2.5rem;
+  }
+  .side-bar .blog-items .blog-item:nth-child(3) {
+    display: grid;
+  }
+}

@@ -1,0 +1,66 @@
+body {
+  background-position: bottom right;
+  height: 100%;
+}
+
+.title {
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid #8db600;
+}
+
+.container {
+  width: 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: 54px auto 10%;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+
+.header h2 {
+  color: #8db600;
+}
+
+.header .menu ul li a {
+  color: #444 !important;
+}
+.header .menu ul li a:hover {
+  color: #8db600;
+}
+
+.content {
+  background: #fdfdfd;
+  width: 90%;
+  height: 100%;
+  margin-top: 54px;
+  padding: 2.5rem;
+  justify-self: center;
+}
+.content .design {
+  margin-bottom: 2.5rem;
+}
+.content .design .design-colours {
+  display: grid;
+  grid-template-rows: 50px 50px 50px 50px;
+  grid-template-columns: auto 50px;
+  grid-gap: 1rem;
+}
+.content .design .design-colours .colour {
+  display: flex;
+  align-items: center;
+}
+.content .design .design-colours .colour-example.example-1 {
+  background-color: #8db600;
+}
+.content .design .design-colours .colour-example.example-2 {
+  background-color: #fdfdfd;
+  border: 1px solid #777;
+}
+.content .design .design-colours .colour-example.example-3 {
+  background-color: #444;
+}
+.content .design .design-colours .colour-example.example-4 {
+  background-color: #777;
+}

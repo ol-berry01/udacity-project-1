@@ -5,10 +5,32 @@ body {
   font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
+.container {
+  grid-template-areas:
+    "header"
+    "caption"
+    "content"
+    "quote"
+    "sidebar"
+    "footer";
+}
+
+.caption {
+  color: #8db600;
+  margin: 35rem 0 0;
+  grid-area: caption;
+}
+
+.caption .caption-content {
+  background: #fdfdfd;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
 .content {
   background: #fdfdfd;
-  margin-top: 40rem;
-  padding: 2.5rem;
+  margin-top: 0;
+  padding: 2rem;
   grid-area: content;
   display: grid;
   grid-template-areas:
@@ -20,6 +42,19 @@ body {
   content: "";
   border-bottom: 1px solid #777;
   opacity: 0.2;
+}
+.content .article .article-head .article-head-social {
+  margin: 1rem 0 1rem;
+}
+.content .article .article-head .article-head-social a i {
+  color: #8db600;
+
+  font-size: 3rem;
+  margin: 0 1rem 0 0;
+  transition: 300ms;
+}
+.content .article .article-head .article-head-social a i:hover {
+  color: #444;
 }
 .content .article-gallery {
   width: 100%;
@@ -43,9 +78,54 @@ body {
   background: url("../images/60022-Mallard-Stoke_Bank.jpg") no-repeat center center/cover;
 }
 
+.content .article-author {
+  background: #8db600;
+  margin: 2rem 0;
+  border: 2px solid #8db600;
+  border-radius: 0.3rem;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-areas:
+    "avatar name"
+    "bio bio";
+}
+.content .article-author .article-author-avatar {
+  height: 108px;
+  background-size: cover;
+  background-position: center;
+  grid-area: avatar;
+}
+.content .article-author .article-author-name {
+  color: #fdfdfd;
+  padding: 2rem;
+  width: 100%;
+  grid-area: name;
+  display: flex;
+  align-self: center;
+}
+.content .article-author .article-author-name h4 {
+  color: #fdfdfd;
+}
+.content .article-author .article-author-name h4 span {
+  font-weight: 700;
+}
+.content .article-author .article-author-bio {
+  background-color: #fdfdfd;
+  padding: 2rem;
+  grid-area: bio;
+}
+.quote {
+  color: #8db600;
+  padding: 2rem;
+  font-size: 3rem;
+  position: relative;
+  grid-area: quote;
+  display: flex;
+}
+
 .side-bar {
   background: #fdfdfd;
-  padding: 2.5rem;
+  padding: 2rem;
   grid-area: sidebar;
   display: grid;
   grid-template-rows: 35px repeat(2, 1fr);
@@ -103,23 +183,35 @@ body {
 
   .container {
     grid-template-rows: 54px auto 25% 10%;
-    grid-template-columns: 100%;
+    grid-template-columns: 50% 50%;
     grid-template-areas:
-      "header"
-      "content"
-      "sidebar"
-      "footer";
+      "header header"
+      "quote content"
+      "caption sidebar"
+      "footer footer";
   }
 
   .header {
     position: fixed;
   }
 
+  .quote {
+    background: rgba(0, 0, 0, 0.2);
+    grid-area: quote;
+    display: flex;
+    align-items: end;
+    align-self: end;
+    padding: 2rem;
+    font-size: 3rem;
+    color: #fdfdfd;
+    max-width: 70%;
+  }
+
   .content {
     width: 70%;
     margin-top: 0;
     margin-left: auto;
-    padding: 2.5rem;
+    padding: 2rem;
     grid-template-rows: 65% 35%;
   }
   .content .article-gallery {
@@ -139,7 +231,7 @@ body {
   .side-bar {
     width: 70%;
     margin-left: auto;
-    padding: 2.5rem;
+    padding: 2rem;
     grid-template-rows: 35px auto;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-areas:
@@ -154,7 +246,7 @@ body {
 @media (min-width: 1100px) {
   body {
     background-repeat: no-repeat;
-    background-position: bottom left;
+    background-position: center left;
     background-size: 50%;
     background-color: #fdfdfd;
     color: #444;
@@ -172,8 +264,8 @@ body {
     grid-template-rows: 5% auto 17.5% 12.5%;
     grid-template-areas:
       "header header"
-      "content content"
-      "sidebar sidebar"
+      "quote content"
+      "caption sidebar"
       "footer footer";
   }
   .header {
@@ -191,14 +283,22 @@ body {
     transition: 300ms;
   }
 
+  .quote {
+    margin-top: 35rem;
+    grid-area: quote;
+  }
+  .quote i {
+    color: #fdfdfd;
+    font-size: 3rem;
+  }
+
   .content {
-    width: 50%;
+    width: 100%;
     margin-top: 0;
-    margin-left: auto;
-    padding: 2.5rem;
+    padding: 2rem;
     display: grid;
     grid-template-rows: auto 30%;
-    grid-gap: 2.5rem;
+    grid-gap: 2rem;
     align-content: center;
   }
   .content:after {
@@ -209,27 +309,100 @@ body {
   .content .article {
     align-self: center;
   }
+  .content .article .article-head {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 70% 30%;
+  }
+  .content .article .article-head .article-head-social {
+    margin-left: auto;
+  }
+  .content .article .article-head .article-head-social a i {
+    color: #8db600;
+    font-size: 2.4rem;
+    margin: 0 0 0 0.5rem;
+    transition: 300ms;
+  }
+  .content .article .article-head .article-head-social a i:hover {
+    color: #444;
+  }
   .content .article-gallery {
     grid-template-rows: 100%;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-gap: 2.5rem;
+    grid-gap: 2rem;
   }
   .content .article-gallery-img {
     height: 100%;
   }
 
-  .side-bar {
-    width: 50%;
-    padding: 2.5rem;
-    margin-left: auto;
+  .content .article-author {
+    background: #8db600;
+    margin: 0;
+    border: 2px solid #8db600;
+    border-radius: 0.3rem;
     display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-areas:
+      "avatar name"
+      "avatar bio";
+  }
+  .content .article-author .article-author-avatar {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    grid-area: avatar;
+  }
+  .content .article-author .article-author-name {
+    color: #fdfdfd;
+    padding: 1rem 1rem 0.5rem;
+    width: 100%;
+    grid-area: name;
+    display: flex;
+    align-self: center;
+  }
+  .content .article-author .article-author-name h4 {
+    color: #fdfdfd;
+    margin-bottom: 0;
+  }
+  .content .article-author .article-author-bio {
+    background: #8db600;
+    color: #fdfdfd;
+    padding: 1rem;
+    grid-area: bio;
+  }
+  .content .article-author .article-author-bio p {
+    margin: 0;
+  }
+
+  .caption {
+    color: #8db600;
+    margin: 0;
+    max-height: auto;
+    grid-area: caption;
+  }
+
+  .caption .caption-content {
+    background: #fdfdfd;
+    max-width: 70%;
+    padding: 2rem;
+    font-size: 2rem;
+  }
+  .caption .caption-content strong {
+    font-size: 2rem;
+  }
+
+  .side-bar {
+    width: 100%;
+    padding: 2rem;
+    display: grid;
+    grid-area: sidebar;
     grid-template-rows: 100%;
     grid-template-columns: 100px repeat(2, 1fr);
     grid-template-areas: "side-bar-title side-bar-content side-bar-content";
-    grid-gap: 2.5rem;
+    grid-gap: 2rem;
   }
   .side-bar .side-bar-card {
     height: 100%;
-    padding: 2.5rem;
+    padding: 2rem;
   }
 }

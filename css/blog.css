@@ -38,24 +38,28 @@ body {
     "button";
   grid-template-rows: minmax(150px, auto) auto;
 }
+
 .content:after {
   content: "";
   border-bottom: 1px solid #777;
   opacity: 0.2;
 }
+
 .content .article .article-head .article-head-social {
   margin: 1rem 0 1rem;
 }
+
 .content .article .article-head .article-head-social a i {
   color: #8db600;
-
   font-size: 3rem;
   margin: 0 1rem 0 0;
   transition: 300ms;
 }
+
 .content .article .article-head .article-head-social a i:hover {
   color: #444;
 }
+
 .content .article-gallery {
   width: 100%;
   height: 100%;
@@ -63,19 +67,40 @@ body {
   grid-template-rows: repeat(3, minmax(0, 1fr));
   grid-gap: 1rem;
 }
+
 .content .article-gallery-img {
   height: 60vw;
   border: 2px solid #8db600;
   border-radius: 0.3rem;
+  position: relative;
+  overflow: hidden;
 }
-.content .article-gallery-img.gallery-img-1 {
-  background: url("../images/4468-Mallard.jpg") no-repeat center center/cover;
+
+.content .article-gallery-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.content .article-gallery-img.gallery-img-2 {
-  background: url("../images/4468-Mallard-Record_Plate.jpg") no-repeat center center/cover;
+
+.content .article-gallery-img figcaption {
+  display: flex;
+  background: #fdfdfd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  color: #8db600;
+  align-items: center;
+  text-align: center;
+  transition: 600ms ease;
+  transform: translateY(100%);
 }
-.content .article-gallery-img.gallery-img-3 {
-  background: url("../images/60022-Mallard-Stoke_Bank.jpg") no-repeat center center/cover;
+
+.content .article-gallery-img:hover figcaption {
+  transform: translateY(0);
 }
 
 .content .article-author {
@@ -89,12 +114,14 @@ body {
     "avatar name"
     "bio bio";
 }
+
 .content .article-author .article-author-avatar {
   height: 108px;
   background-size: cover;
   background-position: center;
   grid-area: avatar;
 }
+
 .content .article-author .article-author-name {
   color: #fdfdfd;
   padding: 2rem;
@@ -103,17 +130,21 @@ body {
   display: flex;
   align-self: center;
 }
+
 .content .article-author .article-author-name h4 {
   color: #fdfdfd;
 }
+
 .content .article-author .article-author-name h4 span {
   font-weight: 700;
 }
+
 .content .article-author .article-author-bio {
   background-color: #fdfdfd;
   padding: 2rem;
   grid-area: bio;
 }
+
 .quote {
   color: #8db600;
   padding: 2rem;
@@ -135,6 +166,7 @@ body {
     "side-bar-content"
     "side-bar-content";
 }
+
 .side-bar .side-bar-title {
   background: #8db600;
   padding: 1rem;
@@ -142,27 +174,34 @@ body {
   align-items: center;
   grid-area: side-bar-title;
 }
+
 .side-bar .side-bar-card {
   display: flex;
   align-items: center;
   text-align: center;
 }
+
 .side-bar .side-bar-card a {
   width: 100%;
 }
+
 .side-bar .side-bar-card h4 {
   color: #fdfdfd;
 }
+
 .side-bar .side-bar-title h4 {
   color: #fdfdfd;
   margin-bottom: 0;
 }
+
 .side-bar .side-bar-card {
   height: 60vw;
 }
+
 .side-bar .side-bar-card-1 {
   background: url("../images/60103-scotsman-thumb.jpg") no-repeat center center/cover;
 }
+
 .side-bar .side-bar-card-2 {
   background: url("../images/46233-duchess-thumb.jpg") no-repeat center center/cover;
 }
@@ -214,6 +253,7 @@ body {
     padding: 2rem;
     grid-template-rows: 65% 35%;
   }
+
   .content .article-gallery {
     width: 100%;
     height: 100%;
@@ -222,6 +262,7 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 1rem;
   }
+
   .content .article-gallery-img {
     height: auto;
     border: 2px solid #8db600;
@@ -238,6 +279,7 @@ body {
       "side-bar-title side-bar-title"
       "side-bar-content side-bar-content";
   }
+
   .side-bar .side-bar-card {
     height: auto;
   }
@@ -268,15 +310,19 @@ body {
       "caption sidebar"
       "footer footer";
   }
+
   .header {
     background: #fdfdfd;
   }
+
   .header h2 {
     color: #8db600;
   }
+
   .header .menu ul li a {
     color: #444 !important;
   }
+
   .header .admin ul li a {
     color: #444;
     text-decoration: none;
@@ -287,6 +333,7 @@ body {
     margin-top: 35rem;
     grid-area: quote;
   }
+
   .quote i {
     color: #fdfdfd;
     font-size: 3rem;
@@ -301,36 +348,44 @@ body {
     grid-gap: 2rem;
     align-content: center;
   }
+
   .content:after {
     content: "";
     border-bottom: 1px solid #777;
     opacity: 0.2;
   }
+
   .content .article {
     align-self: center;
   }
+
   .content .article .article-head {
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 70% 30%;
   }
+
   .content .article .article-head .article-head-social {
     margin-left: auto;
   }
+
   .content .article .article-head .article-head-social a i {
     color: #8db600;
     font-size: 2.4rem;
     margin: 0 0 0 0.5rem;
     transition: 300ms;
   }
+
   .content .article .article-head .article-head-social a i:hover {
     color: #444;
   }
+
   .content .article-gallery {
     grid-template-rows: 100%;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2rem;
   }
+
   .content .article-gallery-img {
     height: 100%;
   }
@@ -346,12 +401,15 @@ body {
       "avatar name"
       "avatar bio";
   }
+
   .content .article-author .article-author-avatar {
+    background-image: url("//shorturl.at/bcxG3");
     height: 100%;
     background-size: cover;
     background-position: center;
     grid-area: avatar;
   }
+
   .content .article-author .article-author-name {
     color: #fdfdfd;
     padding: 1rem 1rem 0.5rem;
@@ -360,16 +418,19 @@ body {
     display: flex;
     align-self: center;
   }
+
   .content .article-author .article-author-name h4 {
     color: #fdfdfd;
     margin-bottom: 0;
   }
+
   .content .article-author .article-author-bio {
     background: #8db600;
     color: #fdfdfd;
     padding: 1rem;
     grid-area: bio;
   }
+
   .content .article-author .article-author-bio p {
     margin: 0;
   }
@@ -387,6 +448,7 @@ body {
     padding: 2rem;
     font-size: 2rem;
   }
+
   .caption .caption-content strong {
     font-size: 2rem;
   }
@@ -401,6 +463,7 @@ body {
     grid-template-areas: "side-bar-title side-bar-content side-bar-content";
     grid-gap: 2rem;
   }
+
   .side-bar .side-bar-card {
     height: 100%;
     padding: 2rem;
